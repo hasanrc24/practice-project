@@ -1,0 +1,28 @@
+{
+    "todos": [
+        {
+            "userId": 1,
+            "id": 1,
+            "title": "Lorem ispum",
+            "completed": false
+        },
+        {
+            "userId": 1,
+            "id": 2,
+            "title": "Lorem ispum dolor",
+            "completed": false
+        },
+        {
+            "userId": 2,
+            "id": 3,
+            "title": "ispum sit amet",
+            "completed": false
+        },
+        {
+            "userId": 3,
+            "id": 4,
+            "title": "Dummy data",
+            "completed": false
+        }
+    ]
+}
