@@ -21,6 +21,10 @@ const Home = () => {
           <p>Lorem ipsum</p>
           <button className='text-xl'> <MdDelete /></button>
         </div>
+        <div className="text-center mx-auto mt-4">
+
+      <button className='py-2 px-7 rounded-md text-white bg-sky-800'>Clear</button>
+        </div>
       </div>
     </div>
   )
