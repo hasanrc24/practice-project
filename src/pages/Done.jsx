@@ -23,16 +23,16 @@ const Done = () => {
         <p className='text-center mt-4 text-xl'>Completed Todos</p>
         <div className="pb-4 mt-4">
               {
-            isSuccess ? todos?.map((curTodo) => {
+                isSuccess ? todos?.map((curTodo) => {
               return curTodo.completed && <div key={curTodo.id} className="flex justify-between bg-slate-400 my-1 p-2">
               <input type="checkbox" checked={curTodo.completed} name="check" onChange={() => updateTodo({...curTodo, completed: !curTodo.completed })} className='m-2 p-4 h-4 w-4' />
               <p>{curTodo.title}</p>
               <button className='text-xl' onClick={() => handleDeleteTodo(curTodo.id)}> <MdDelete /></button>
               </div>
-            }) : content
+            }) : content 
           }
           {
-            todos?.length === 0 && <p>No todos</p>
+            todos?.every(todo => !todo.completed) && <p>No completed todos</p>
           }
         </div>
         <Link to="/" className='py-2 px-5 rounded-md text-white mx-auto bg-purple-600'>Home</Link>

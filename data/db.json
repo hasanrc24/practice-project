@@ -12,12 +12,12 @@
     },
     {
       "title": "third todo",
-      "completed": false,
+      "completed": true,
       "id": 3
     },
     {
       "title": "fourth todo",
-      "completed": true,
+      "completed": false,
       "id": 4
     }
   ]

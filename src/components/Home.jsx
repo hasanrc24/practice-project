@@ -50,6 +50,9 @@ const Home = () => {
           {
             todos?.length === 0 && <p>No todos</p>
           }
+          {
+            todos?.every(todo => todo.completed) && <p>No uncompleted todo left!!</p>
+          }
         </div>
         <div className="py-2">
           <button className='py-2 px-7 rounded-md text-white mx-auto bg-sky-800 mr-2'>Clear</button>
