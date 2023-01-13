@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
  import {IoIosSend} from 'react-icons/io'
  import {MdDelete} from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import { useAddTodoMutation, useDeleteTodoMutation, useGetTodosQuery, useUpdateTodoMutation } from '../Redux/api/apiSlice';
 
 
@@ -26,7 +27,7 @@ const Home = () => {
     content = <p>Loading...</p>
   }
   else if(isError){
-    content = <p>{error.error}</p>
+    content = <p>{error?.error}</p>
   }
   return (
     <div className='h-[80%] w-[60%] md:w-[30%] shadow-2xl bg-gray-300 rounded-lg '>
@@ -39,7 +40,7 @@ const Home = () => {
         <div className="">
           {
             isSuccess ? todos?.map((curTodo) => {
-              return <div key={curTodo.id} className="flex justify-between bg-slate-400 my-1 p-2">
+              return !curTodo.completed && <div key={curTodo.id} className="flex justify-between bg-slate-400 my-1 p-2">
               <input type="checkbox" checked={curTodo.completed} name="check" onChange={() => updateTodo({...curTodo, completed: !curTodo.completed })} className='m-2 p-4 h-4 w-4' />
               <p>{curTodo.title}</p>
               <button className='text-xl' onClick={() => handleDeleteTodo(curTodo.id)}> <MdDelete /></button>
@@ -47,10 +48,13 @@ const Home = () => {
             }) : content
           }
           {
-            todos.length === 0 && <p>No todos</p>
+            todos?.length === 0 && <p>No todos</p>
           }
         </div>
-        <button className='py-2 px-7 rounded-md text-white mx-auto bg-sky-800'>Clear</button>
+        <div className="py-2">
+          <button className='py-2 px-7 rounded-md text-white mx-auto bg-sky-800 mr-2'>Clear</button>
+          <Link to="/done" className='py-2 px-5 rounded-md text-white mx-auto bg-purple-600'>Completed</Link>
+        </div>
         </div>
     </div>
   )
