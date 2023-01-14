@@ -1,7 +1,7 @@
 {
   "todos": [
     {
-      "title": "First todo",
+      "title": "first todo",
       "completed": false,
       "id": 1
     },
@@ -12,12 +12,12 @@
     },
     {
       "title": "third todo",
-      "completed": true,
+      "completed": false,
       "id": 3
     },
     {
       "title": "fourth todo",
-      "completed": false,
+      "completed": true,
       "id": 4
     }
   ]

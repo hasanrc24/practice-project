@@ -21,6 +21,11 @@ const Home = () => {
   const handleDeleteTodo = (id) => {
     deleteTodo({id: id})
   }
+  const handleClear = () => {
+    todos.map(todo => {
+      deleteTodo({id: todo.id});
+    })
+  }
 
   let content;
   if(isLoading){
@@ -48,14 +53,11 @@ const Home = () => {
             }) : content
           }
           {
-            todos?.length === 0 && <p>No todos</p>
-          }
-          {
-            todos?.every(todo => todo.completed) && <p>No uncompleted todo left!!</p>
+            todos?.length === 0 ? <p>No todos</p> : todos?.every(todo => todo.completed) && <p>No uncompleted todo left!!</p>
           }
         </div>
         <div className="py-2">
-          <button className='py-2 px-7 rounded-md text-white mx-auto bg-sky-800 mr-2'>Clear</button>
+          <button onClick={handleClear} className='py-2 px-7 rounded-md text-white mx-auto bg-sky-800 mr-2'>Clear</button>
           <Link to="/done" className='py-2 px-5 rounded-md text-white mx-auto bg-purple-600'>Completed</Link>
         </div>
         </div>
