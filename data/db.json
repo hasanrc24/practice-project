@@ -17,8 +17,23 @@
     },
     {
       "title": "fourth todo",
-      "completed": true,
+      "completed": false,
       "id": 4
+    },
+    {
+      "title": "fifth todo",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "sixth todo",
+      "completed": false,
+      "id": 6
+    },
+    {
+      "title": "seventh todo",
+      "completed": false,
+      "id": 7
     }
   ]
 }
