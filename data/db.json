@@ -2,7 +2,7 @@
   "todos": [
     {
       "title": "first todo",
-      "completed": false,
+      "completed": true,
       "id": 1
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "title": "third todo",
-      "completed": false,
+      "completed": true,
       "id": 3
     },
     {

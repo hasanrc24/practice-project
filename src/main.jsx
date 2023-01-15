@@ -8,7 +8,7 @@ import Done from './pages/Done'
 import { apiSlice } from './Redux/api/apiSlice'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <ApiProvider api={apiSlice}>
       <BrowserRouter>
         <Routes>
@@ -16,6 +16,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='/done' element={<Done />} />
         </Routes>
       </BrowserRouter>
-    </ApiProvider>
-  </React.StrictMode>,
+    </ApiProvider>,
+  // </React.StrictMode>
 )
