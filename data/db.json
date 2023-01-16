@@ -7,12 +7,12 @@
     },
     {
       "title": "second todo",
-      "completed": false,
+      "completed": true,
       "id": 2
     },
     {
       "title": "third todo",
-      "completed": true,
+      "completed": false,
       "id": 3
     },
     {
@@ -34,6 +34,11 @@
       "title": "seventh todo",
       "completed": false,
       "id": 7
+    },
+    {
+      "title": "8th todo",
+      "completed": false,
+      "id": 8
     }
   ]
 }

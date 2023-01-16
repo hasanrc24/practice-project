@@ -45,7 +45,6 @@ const Home = () => {
 
   const onDragEnd = (result) => {
     const {source, destination} = result;
-    console.log(result);
     if(!destination) return;
     if(destination.droppableId === source.droppableId && destination.index === source.index){
       return;
