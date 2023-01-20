@@ -63,10 +63,13 @@ const Home = () => {
   else if(isError){
     content = <p>{error?.error}</p>
   }
+
+  const a = todos?.map(todo => !todo.completed);
+  const uncompleted = a.filter(Boolean);
   return (
     <DragDropContext onDragEnd={onDragEnd}>
     <div className='h-[82%] w-[75%] md:w-[50%] lg:w-[35%] shadow-2xl bg-gray-300 rounded-lg '>
-        <p className='text-center mt-4 text-xl'>Todo List</p>
+        <p className='text-center mt-4 text-xl'>Todo List: {uncompleted.length}</p>
       <div className="p-4">
         <form className="w-full mb-4 flex items-center" >
           <input type="text" name="todo" value={todo} onChange={(e) => setTodo(e.target.value)} className='w-full p-2 outline-none border-b-2 border-b-gray-600 focus:border-b-purple-600' placeholder='Enter your task' />
