@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import App from './App'
 import './index.css'
 import Done from './pages/Done'
+import Fetch from './pages/Fetch'
 import { apiSlice } from './Redux/api/apiSlice'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path='/' element={<App />} />
           <Route path='/done' element={<Done />} />
+          <Route path='/fetch' element={<Fetch />} />
         </Routes>
       </BrowserRouter>
     </ApiProvider>,

@@ -65,11 +65,11 @@ const Home = () => {
   }
 
   const a = todos?.map(todo => !todo.completed);
-  const uncompleted = a.filter(Boolean);
+  const uncompleted = a?.filter(Boolean);
   return (
     <DragDropContext onDragEnd={onDragEnd}>
     <div className='h-[82%] w-[75%] md:w-[50%] lg:w-[35%] shadow-2xl bg-gray-300 rounded-lg '>
-        <p className='text-center mt-4 text-xl'>Todo List: {uncompleted.length}</p>
+        <p className='text-center mt-4 text-xl'>Todo List: {uncompleted?.length}</p>
       <div className="p-4">
         <form className="w-full mb-4 flex items-center" >
           <input type="text" name="todo" value={todo} onChange={(e) => setTodo(e.target.value)} className='w-full p-2 outline-none border-b-2 border-b-gray-600 focus:border-b-purple-600' placeholder='Enter your task' />
@@ -113,7 +113,8 @@ const Home = () => {
         </Droppable>
         <div className="py-4">
           <button onClick={handleClear} className='py-2 px-7 rounded-md text-white mx-auto bg-sky-800 mr-2'>Clear</button>
-          <Link to="/done" className='py-2 px-5 rounded-md text-white mx-auto bg-purple-600'>Completed</Link>
+          <Link to="/done" className='py-2 px-5 rounded-md text-white mx-auto bg-purple-600 mr-2'>Completed</Link>
+          <Link to="/fetch" className='py-1 px-2 rounded-md text-white mx-auto bg-purple-600'>Other</Link>
         </div>
       </div>
     </div>

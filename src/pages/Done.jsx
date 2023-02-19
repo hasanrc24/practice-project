@@ -18,11 +18,11 @@ const Done = () => {
     content = <p>{error?.error}</p>
   }
   const a = todos?.map(todo => todo.completed);
-  const completed = a.filter(Boolean);
+  const completed = a?.filter(Boolean);
   return (
     <div className='bg-gradient-to-r from-bg-left-gradient to-bg-right-gradient h-screen w-screen flex justify-center items-center'>
         <div className='h-[82%] w-[75%] md:w-[50%] lg:w-[35%] shadow-2xl bg-white backdrop-filter backdrop-blur-lg bg-opacity-40 rounded-lg px-4'>
-        <p className='text-center mt-4 text-xl'>Completed Todos: {completed.length}</p>
+        <p className='text-center mt-4 text-xl'>Completed Todos: {completed?.length}</p>
         <div className="pb-4 mt-4">
               {
                 isSuccess ? todos?.map((curTodo) => {
