@@ -24,7 +24,7 @@ const Fetch = () => {
     .then(res => console.log(res))
   }
   return (
-    <form onSubmit={handleSubmit} className='p-3 bg-slate-500'>
+    <form onSubmit={handleSubmit} className='p-3 bg-slate-500 text-center'>
       <input type="number" name="id" id="number" value={user} onChange={(e) => setUser(e.target.value)} />
       <br />
       <br />
